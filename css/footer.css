@@ -1,0 +1,24 @@
+/* Footer Styles */
+
+.footer-box {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.footer-content {
+  background-color: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  padding: 30px 20px;
+  text-align: center;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666666;
+  margin-bottom: 60px;
+}

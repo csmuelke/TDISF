@@ -1,0 +1,51 @@
+/* Media Queries and Accessibility */
+
+@media print {
+  .top-grid,
+  .sidebar-left,
+  .sidebar-right,
+  .navigation-vertical,
+  .tags-container {
+    display: none !important;
+  }
+  
+  .content-main-container {
+    border: none !important;
+    width: 100% !important;
+  }
+  
+  .content-main {
+    background-color: white !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  
+  .story-tile {
+    break-inside: avoid;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .story-tile {
+    border: 2px solid;
+  }
+  
+  .tag {
+    border: 1px solid;
+  }
+  
+  .navigation-btn {
+    border: 1px solid;
+  }
+}

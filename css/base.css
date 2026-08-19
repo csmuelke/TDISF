@@ -1,0 +1,85 @@
+/* Base Styles - Resets and Typography */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(165, 30, 55, 0.2);
+  -webkit-touch-callout: none;
+}
+
+button, 
+.navigation-btn, 
+.tag, 
+.story-tile,
+.close-btn,
+.download-btn {
+  -webkit-tap-highlight-color: rgba(165, 30, 55, 0.3);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0 20px 0;
+  color: #333333;
+}
+
+p {
+  text-align: center;
+  margin: 0 0 20px 0;
+  color: #666666;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #a51e37;
+  margin: 0 0 8px 0;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.main-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+  font-style: italic;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}

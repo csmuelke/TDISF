@@ -1,0 +1,344 @@
+/* Modal Styles - Story Modal and Trigger Warning Modal */
+
+/* Story Modal */
+.story-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.story-modal-content {
+  background-color: #ffffff;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: modalSlideIn 0.3s ease;
+  position: relative;
+  
+  scrollbar-width: thin;
+  scrollbar-color: #a51e37 #f0f0f0;
+  -ms-overflow-style: auto;
+}
+
+.story-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.story-modal-content::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.story-modal-content::-webkit-scrollbar-thumb {
+  background: #a51e37;
+  border-radius: 4px;
+  border: 2px solid #f0f0f0;
+}
+
+.story-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #8b1a30;
+}
+
+.story-modal-content::-webkit-scrollbar-button {
+  display: none;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.story-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  position: relative;
+  min-height: 60px;
+  box-sizing: border-box;
+}
+
+.story-modal-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  right: 30px;
+  height: 3px;
+  background-color: #a51e37;
+}
+
+.modal-header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.download-btn {
+  background: #a51e37;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+}
+
+.download-btn:hover {
+  background-color: #8b1a30;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(165, 30, 55, 0.3);
+}
+
+.story-modal-header h2 {
+  margin: 0;
+  color: #333333;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.story-modal-header .close-btn {
+  color: #333333;
+  font-size: 24px;
+  padding: 5px 8px;
+}
+
+.story-modal-header .close-btn:hover {
+  background-color: rgba(165, 30, 55, 0.1);
+  color: #a51e37;
+}
+
+.story-modal-body {
+  padding: 30px;
+}
+
+.story-info {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.story-meta {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  border-left: 4px solid #a51e37;
+}
+
+.story-meta p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #333333;
+  text-align: left;
+}
+
+.story-meta strong {
+  color: #a51e37;
+  font-weight: 600;
+}
+
+.story-abstract {
+  line-height: 1.6;
+}
+
+.story-abstract h3 {
+  margin: 0 0 15px 0;
+  color: #a51e37;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid #a51e37;
+  padding-bottom: 5px;
+}
+
+.story-abstract p {
+  color: #444444;
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: justify;
+  margin: 0;
+}
+
+.story-tags-section {
+  margin-top: 25px;
+  line-height: 1.6;
+}
+
+.story-tags-section h3 {
+  margin: 0 0 15px 0;
+  color: #a51e37;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid #a51e37;
+  padding-bottom: 5px;
+}
+
+.story-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.story-modal-tag {
+  display: inline-block;
+  background-color: #a51e37;
+  color: white;
+  padding: 4px 12px 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.story-modal-tag:hover {
+  background-color: #8b1a30;
+}
+
+.story-modal-tag.no-tags {
+  background-color: #cccccc;
+  color: #666666;
+  font-style: italic;
+}
+
+.story-modal-tag.no-tags:hover {
+  background-color: #cccccc;
+}
+
+/* Trigger Warning Modal */
+.trigger-warning-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.trigger-warning-content {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.trigger-warning-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.trigger-warning-body {
+  margin-bottom: 25px;
+}
+
+.trigger-warnings-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.trigger-warning-tag {
+  display: inline-block;
+  background-color: #f8f8f8;
+  color: #333333;
+  padding: 8px 12px;
+  margin: 4px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.trigger-warning-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.trigger-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 3px;
+  min-height: 40px;
+}
+
+.trigger-btn:hover {
+  background-color: #333333;
+}
+
+.trigger-btn-back:hover {
+  background-color: #555555;
+}
+
+.trigger-btn-continue:hover {
+  background-color: #333333;
+}

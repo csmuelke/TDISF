@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>TDISF</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/filters.css">
+  <link rel="stylesheet" href="css/story-tiles.css">
+  <link rel="stylesheet" href="css/modals.css">
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/media.css">
+  
+  <!-- External Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  
+  <!-- JavaScript Files -->
+  <script src="js/stories.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/init.js"></script>
+
+</head>
+
+<body>
+
+<div class="main-container">
+  
+  <div class="top-grid">
+
+    <div class="top-left-box">
+      <a href="https://uni-tuebingen.de/en/fakultaeten/philosophische-fakultaet/fachbereiche/neuphilologie/englisches-seminar/" 
+         target="_blank" 
+         class="top-university-logo-link"
+         title="English Department">
+        <img src="media/Logo_Universitaet_Tuebingen.svg" alt="University of Tübingen Logo" class="top-university-logo">
+      </a>
+    </div>
+    
+    <div class="top-middle-container">
+      <div class="top-header-box">
+        <h1 class="main-title">TDISF</h1>
+        <p class="main-subtitle">Tübingen Database of Irish Science Fiction</p>
+      </div>
+    </div>
+    
+    <div class="top-right-box">
+      EMPTY SPACE
+    </div>
+
+  </div>
+
+  <div class="content-row">
+    
+    <div class="sidebar-left">
+
+      <div class="navigation-title">Menu</div>
+      
+      <nav class="navigation-vertical">
+
+        <div class="navigation-list">
+
+          <div class="dropdown">
+            <div class="navigation-btn dropdown-toggle">
+              <a href="index.html" class="dropdown-text">Home</a>
+              <span class="dropdown-arrow">▼</span>
+            </div>
+
+            <div class="dropdown-menu">
+              <a href="#simple-list-download" class="dropdown-item">EMPTY BUTTON</a>
+              <a href="#stories" class="dropdown-item">EMPTY BUTTON</a>
+              <a href="#tags" class="dropdown-item">EMPTY BUTTON</a>
+            </div>
+          </div>
+
+          <div class="navigation-btn">
+            <a href="index.html" class="bibliography-link">Bibliography</a>
+          </div>
+        </div>
+
+      </nav>
+      
+      <div class="about-section">
+        <div class="about-description">
+          The <strong>Tübingen Irish Database of Irish Science Fiction (TDISF)</strong> strives to create a database that comprises a selection of Irish SF texts for all researchers to use. The database was created based on the observation that there is significantly more Irish science fiction than one might initially assume. However, these texts are hardly visible in either the broader context of Irish literature or in the context of the science fiction metatext. Yet, as highlighted in the works of Jack Fennell (see the bibliography), Irish science fiction is inextricably linked to the Irish cultural imaginary, as this genre uniquely negotiates tradition and modernity. Against this backdrop, the database aims to contribute to the visibility of Irish science fiction and thus underscore its significance.
+          <br><br>
+          TDISF is part of the program <a href="https://uni-tuebingen.de/en/lehrende/foerderformate/" target="_blank">"Mehr innovative Lehre wagen!"</a> and funded by the <a href="https://uni-tuebingen.de/en/facilities/administration/iii-academic-affairs/" target="_blank">Division III Academic Affairs</a> of the University of Tübingen. The database is being created in the context of two seminars taught by PD Dr. Raphael Zähringer: "Irish Science Fiction" (summer term 2025) and "Anthologising Anglophone Science Fiction" (winter term 2025/2026). On the one hand, the database draws on Jack Fennell's existing bibliography <a href="docs/d00e40d4-eda8-46a1-9195-98fe667c2d0a.pdf" target="_blank" download><em>A Short Guide to Irish Science Fiction</em> (2019)</a>, whose entries are to be converted into a database format. On the other hand, in line with approaches to research-based learning, students in both courses are searching for Irish SF texts themselves and creating additional entries for texts in a process that is validated by student peer review. Taking these two sources together, it is expected that by the end of the funding phase in spring 2026, approximately 200 database entries will have been compiled.
+        </div>
+      </div>
+    </div>
+    
+    <div class="content-main-container">
+
+      <div class="content-main">
+        <div class="search-container">
+          <input type="text" 
+                 id="story-search" 
+                 placeholder="Search stories by title or author ..." 
+                 class="search-input">
+        </div>
+      </div>
+      
+      <div class="story-tiles-container">
+
+        <div class="story-grid" id="story-grid">
+          
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/NPTNP9AY" 
+               data-tags="rebellion space-opera" 
+               data-author="Jo Zebedee"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/NPTNP9AY')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Abendau's Heir</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/XTJQWXNQ" 
+               data-tags="africa afterlife revolution social-media" 
+               data-author="Ian McDonald"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/XTJQWXNQ')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">A Smart Well-Mannered Uprising of the Dead</div>
+          </div>
+          
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/NB2LUCMC" 
+               data-tags="anti-treaty-activities civil-war dreams female-perspective war-of-independence" 
+               data-author="Dorothy Macardle"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/NB2LUCMC')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">A Story Without An End (For N.C.)</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/LM29U3G6" 
+               data-tags="existentialism future time-travel" 
+               data-author="Art Ó Rian"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/LM29U3G6')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">A Vision</div>
+          </div>
+          
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/WWBUADBG" 
+               data-tags="irish-science-fiction mechanical-invention satire social-ambition transport-technology victorian-london" 
+               data-author="Edmund Downey"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/WWBUADBG')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Brayhard</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/YL5ULJ73" 
+               data-tags="alien-contact cooperation medicine science-fiction xenobiology" 
+               data-author="James White"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/YL5ULJ73')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Custom Fitting</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/M8XH6K86" 
+               data-tags="dystopia novel surveillence technology" 
+               data-author="R. B. Kelly"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/M8XH6K86')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Edge of Heaven</div>
+          </div>
+          
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/F926AI5Q" 
+               data-tags="aliens short-stories technology" 
+               data-author="James White"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/F926AI5Q')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Hospital Station</div>
+          </div>
+          
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/7LD555X8" 
+               data-tags="mad-scientist pseudo-science short-story" 
+               data-author="Fitz-James O'Brien"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/7LD555X8')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">How I Overcame My Gravity</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/2RCAS8MC" 
+               data-tags="dystopia future-society technology" 
+               data-author="Michael Carroll"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/2RCAS8MC')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">In Dublin's Veracity</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/TRHS747T" 
+               data-tags="short-stories technology" 
+               data-author="Bob Shaw"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/TRHS747T')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Light of Other Days</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/9UYDETJT" 
+               data-tags="alien medicine prejudice" 
+               data-author="James White"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/9UYDETJT')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Medic</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/GHWQV3AN" 
+               data-tags="feminism future-soiciety imperial-trial visions" 
+               data-author="Amelia Gerland Mears"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/GHWQV3AN')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Mercia, The Astronomer Royale</div>
+          </div>
+          
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/93Z5PXJB" 
+               data-tags="immortality parenthood pharmaceutical-industry procreation" 
+               data-author="Bob Shaw"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/93Z5PXJB')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">One Million Tomorrows</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/ELGPFAIH" 
+               data-tags="short-stories technology" 
+               data-author="Jan Carson"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/ELGPFAIH')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Pillars</div>
+          </div>
+          
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/V5PMM2YQ" 
+               data-tags="aliens conspiracy mind-control" 
+               data-author="Bob Shaw"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/V5PMM2YQ')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Pilot Plant</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/U44LIEA2" 
+               data-tags="genetic-manipulation horror mad-artist" 
+               data-author="James Lecky"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/U44LIEA2')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Skin-Tight</div>
+          </div>
+          
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/ML5WWVMU" 
+               data-tags="dystopia science societal-hierarchy" 
+               data-author="Jo Zebedee"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/ML5WWVMU')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Small Causes</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/7DLQYH4Q" 
+               data-tags="ai dystopia revolution young-adult" 
+               data-author="Sarah Maria Griffin"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/7DLQYH4Q')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Spare and Found Parts</div>
+          </div>
+          
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/E4Y2PWZJ" 
+               data-tags="feminist-science-fiction medical-dystopia satire scientific-hybris technocracy" 
+               data-author="Frances Power Cobbe"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/E4Y2PWZJ')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Age of Science</div>
+          </div>
+          
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/XFZBQPTM" 
+               data-tags="dystopia identity irish-science-fiction regime resistance" 
+               data-author="Tomás Mac Símóin"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/XFZBQPTM')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Cartographer's Apprentice</div>
+          </div>
+          
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/XGTH2TCS" 
+               data-tags="civil-war independence nationalism time-travel" 
+               data-author="Tarlach Ó hUid"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/XGTH2TCS')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Chronotron</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/KHJNT2SP" 
+               data-tags="home immigration space-travel" 
+               data-author="Cathal Ó Sándair"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/KHJNT2SP')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Exile</div>
+          </div>
+          
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/G374Y27K" 
+               data-tags="history-of-science isaac-newton poetry science" 
+               data-author="Iggy McGovern"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/G374Y27K')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Eyes of Isaac Newton</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/VXXSE8H8" 
+               data-tags="satire time-travel" 
+               data-author="Bob Shaw"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/VXXSE8H8')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Giaconda Caper</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/IZGAA4K3" 
+               data-tags="future-war ideology religion technology young-adult" 
+               data-author="Oisín McGann"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/IZGAA4K3')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Gods And Their Machines</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/LUMYWM3L" 
+               data-tags="cryptozoology imperial-guilt lost-world narrative-framing postcolonial-sf" 
+               data-author="Clotilde Graves"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/LUMYWM3L')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Great Beast of Kafue</div>
+          </div>
+
+          <div class="story-tile sensitive-content" 
+               data-story-id="http://zotero.org/groups/6049659/items/BHMBVR97" 
+               data-tags="control dystopia evolution gender survivalism"
+               data-content-warnings="cannibalism blood-gore sexual-assault-violence-implied"
+               data-author="Peadar Ó Guilín"
+               onclick="handleSensitiveContentClick('http://zotero.org/groups/6049659/items/BHMBVR97', this)">
+            <div class="paper-preview">
+              <div class="sensitive-content-badge"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Inferior</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/C85MG37Q" 
+               data-tags="absurd discrimination satire" 
+               data-author="Sinéad Gleeson"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/C85MG37Q')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Lexicon of Babies</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/8ENJWF4Z" 
+               data-tags="crime female-villain mysterious slick" 
+               data-author="L. T. Meade and Robert Eustace"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/8ENJWF4Z')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Luck of Pitsey Hall</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/RKF6BEZN" 
+               data-tags="conspiracy irish-language mysticism parallel-universes" 
+               data-author="Micheal Synnott"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/RKF6BEZN')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Magus Conspiracy</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/9C8YHMS5" 
+               data-tags="gothic-dream-vision horror mad-scientist 
+               data-author="William Maginn"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/9C8YHMS5')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The New Frankenstein</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/UVYEKBE2" 
+               data-tags="bodily-autonomy ethics gender identity mad-science" 
+               data-author="Margaret Wolfe Hungerford"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/UVYEKBE2')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Professor's Experiment</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/CI8L94UJ" 
+               data-tags="charms experiments rejuvenation" 
+               data-author="Charlotte McManus"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/CI8L94UJ')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Sorcerer</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/H4FB752U" 
+               data-tags="dystopia genetic-engineering identity non-linear-narration" 
+               data-author="Michael Carroll"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/H4FB752U')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Third Law: Rico Dredd – The Titan Years</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/4DEG9N4Y" 
+               data-tags="comedic parallel-universes" 
+               data-author="Bob Shaw"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/4DEG9N4Y')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">What Time Do You Call This</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/YBE25A4V" 
+               data-tags="alternate-timelines dublin history identity technology" 
+               data-author="Paul Carrol"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/YBE25A4V')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Wasted Time</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/HN6PKCBE" 
+               data-tags="science-fiction" 
+               data-author="Maria O'Brien"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/HN6PKCBE')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Blue</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/BSQVIIKZ" 
+               data-tags="science-fiction" 
+               data-author="Unknown Author"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/BSQVIIKZ')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Men of Yarnith</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/27S8FLVG" 
+               data-tags="science-fiction" 
+               data-author="Mark Kielty"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/27S8FLVG')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Celestial Circus</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/YGHSRTT5" 
+               data-tags="science-fiction" 
+               data-author="Rien Gray"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/YGHSRTT5')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Bleed Through</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/3FUXW679" 
+               data-tags="science-fiction" 
+               data-author="Yves Donlon"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/3FUXW679')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Artemis</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/Y929MCKZ" 
+               data-tags="science-fiction" 
+               data-author="Kat Dodd"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/Y929MCKZ')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Silicon Remnants</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/7PBQIYJW" 
+               data-tags="science-fiction" 
+               data-author="Kat Dodd"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/7PBQIYJW')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Paradigm Shift</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/XR8DW6NA" 
+               data-tags="science-fiction" 
+               data-author="Kat Dodd"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/XR8DW6NA')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Morning's Echo</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/HRNN6D7E" 
+               data-tags="science-fiction" 
+               data-author="Greg Delanty"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/HRNN6D7E')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Alien</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/KLT7LJLI" 
+               data-tags="science-fiction" 
+               data-author="Paul Carrol"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/KLT7LJLI')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">The Banjaxed Beour</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/S9T7XMQU" 
+               data-tags="science-fiction" 
+               data-author="Natasha Calder"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/S9T7XMQU')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">hotBooley</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/CYGTVXJH" 
+               data-tags="science-fiction" 
+               data-author="Tommy Arrigan"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/CYGTVXJH')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Into the Darklight</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/VYPMIAPK" 
+               data-tags="science-fiction" 
+               data-author="Tommy Arrigan"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/VYPMIAPK')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Europa</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/I289H4TN" 
+               data-tags="science-fiction" 
+               data-author="Jo Zebedee"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/I289H4TN')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Inish Carraig</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/HNBYAABK" 
+               data-tags="science-fiction" 
+               data-author="Jo Zebedee"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/HNBYAABK')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Into A Blood-Red Sky</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/FCXMCYFQ" 
+               data-tags="science-fiction" 
+               data-author="Scotty Sarafian"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/FCXMCYFQ')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Craig McCarthy</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/D6DFIA2X" 
+               data-tags="immortality philosophy religion" 
+               data-author="James William Barlow"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/D6DFIA2X')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">History of a World of Immortals without a God</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/NPTEWYMG" 
+               data-tags="science-fiction" 
+               data-author="Quinn Clancy"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/NPTEWYMG')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Phosphate Poison</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/VIH6AE4Z" 
+               data-tags="science-fiction" 
+               data-author="Caitlín R. Kiernan"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/VIH6AE4Z')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Riding the White Bull</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/DMCLUW4U" 
+               data-tags="science-fiction" 
+               data-author="Helen Carrol"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/DMCLUW4U')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Captain K'wai'lynn and the Pub of a Thousand Planets</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/ZEQDLYMY" 
+               data-tags="gaming virtual-reality" 
+               data-author="Conor Kostick"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/ZEQDLYMY')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Saga</div>
+          </div>
+
+          <div class="story-tile" 
+               data-story-id="http://zotero.org/groups/6049659/items/4GS2822W" 
+               data-tags="science-fiction" 
+               data-author="Anne McCaffrey"
+               onclick="openStoryModal('http://zotero.org/groups/6049659/items/4GS2822W')">
+            <div class="paper-preview">
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+              <div class="paper-lines"></div>
+            </div>
+            <div class="story-title">Velvet Fields</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="sidebar-right">
+
+      <div class="filters-title">Filters</div>
+
+      <div class="tags-container">
+        
+        <div class="filter-dropdown" id="tags-dropdown">
+          <button class="filter-dropdown-toggle" id="tags-dropdown-toggle">
+            <span class="filter-dropdown-label">Keywords</span>
+            <span class="filter-dropdown-arrow">▼</span>
+          </button>
+          <div class="filter-dropdown-menu" id="tags-dropdown-menu">
+            <div class="filter-search-container">
+              <input type="text" 
+                     id="tag-search" 
+                     placeholder="Search keywords ..." 
+                     class="filter-search-input">
+            </div>
+            <div class="filter-dropdown-list" id="tags-list">
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-dropdown" id="authors-dropdown">
+          <button class="filter-dropdown-toggle" id="authors-dropdown-toggle">
+            <span class="filter-dropdown-label">Authors</span>
+            <span class="filter-dropdown-arrow">▼</span>
+          </button>
+          <div class="filter-dropdown-menu" id="authors-dropdown-menu">
+            <div class="filter-search-container">
+              <input type="text" 
+                     id="author-search" 
+                     placeholder="Search authors ..." 
+                     class="filter-search-input">
+            </div>
+            <div class="filter-dropdown-list" id="authors-list">
+            </div>
+          </div>
+        </div>
+
+        <div class="selected-filters-container" id="selected-filters-container" style="display: none;">
+          <div class="selected-filters-header">
+            <span class="selected-filters-title">Active Filters</span>
+            <button class="clear-all-filters-btn" id="clearAllFiltersBtn" title="Clear all filters">Clear All</button>
+          </div>
+          <div class="selected-filters-list" id="selected-filters-list">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footer-box">
+  <div class="footer-content">
+    <p>Footer content goes here</p>
+  </div>
+</div>
+
+<div id="story-modal" class="story-modal">
+
+  <div class="story-modal-content">
+    
+    <div class="story-modal-header">
+      <h2 id="story-title">Story Title</h2>
+      <div class="modal-header-buttons">
+        <button onclick="downloadStoryPDF()" 
+                class="download-btn" 
+                title="Download as PDF">📄</button>
+        <button onclick="closeStoryModal()" 
+                class="close-btn">&times;</button>
+      </div>
+    </div>
+    
+    <div class="story-modal-body">
+
+      <div class="story-info">
+        
+        <div class="story-meta">
+          <p><strong>Author:</strong> <span id="story-author">Author</span></p>
+          <p><strong>Publisher:</strong> <span id="story-publisher">Publisher</span></p>
+          <p><strong>Place:</strong> <span id="story-publisher-place">Place</span></p>
+          <p><strong>Year:</strong> <span id="story-year">Year</span></p>
+          <p id="story-note-container" style="display: none;">
+            <strong>Note:</strong> <span id="story-note">Note</span>
+          </p>
+        </div>
+        
+        <div class="story-abstract">
+          <h3>Abstract</h3>
+          <p id="story-abstract-text">Story abstract will appear here ...</p>
+        </div>
+        
+        <div class="story-tags-section">
+          <h3>Keywords</h3>
+          <div class="story-tags-container" id="story-tags-container">
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div id="trigger-warning-modal" class="trigger-warning-modal">
+
+  <div class="trigger-warning-content">
+    
+    <div class="trigger-warning-header">
+      <h2>Triggerwarning</h2>
+    </div>
+    
+    <div class="trigger-warning-body">
+      <div class="trigger-warnings-container" id="trigger-warnings-container">
+      </div>
+    </div>
+    
+    <div class="trigger-warning-buttons">
+      <button onclick="closeTriggerWarningModal()" class="trigger-btn trigger-btn-back">Back</button>
+      <button onclick="proceedToStory()" class="trigger-btn trigger-btn-continue">Continue</button>
+    </div>
+    
+  </div>
+
+</div>
+    
+</body>
+
+</html>

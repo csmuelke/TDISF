@@ -1,0 +1,163 @@
+/* Navigation Menu Styles */
+
+.navigation-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #a51e37;
+  padding: 20px 20px 15px 20px;
+  border-bottom: 2px solid #a51e37;
+  margin-bottom: 0;
+  text-align: left;
+  background-color: transparent;
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+.navigation-vertical {
+  margin: 0;
+  background: transparent;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.navigation-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  list-style: none;
+}
+
+.navigation-vertical .navigation-btn {
+  width: 100%;
+  display: block;
+  padding: 16px 20px;
+  margin: 0;
+  background: transparent;
+  color: #333333;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.navigation-vertical .navigation-btn:hover {
+  background-color: #e8e8e8;
+  color: #333333;
+  text-decoration: none;
+}
+
+.navigation-vertical .navigation-btn:active {
+  background-color: #e0e0e0;
+  color: #333333;
+}
+
+.bibliography-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bibliography-link:hover,
+.bibliography-link:focus,
+.bibliography-link:active,
+.bibliography-link:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navigation-vertical .dropdown {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.navigation-vertical .dropdown-toggle {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navigation-vertical .dropdown-text {
+  flex: 1;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigation-vertical .dropdown-text:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigation-vertical .dropdown-arrow {
+  font-size: 10px;
+  color: #999999;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  padding: 5px;
+  margin-right: auto;
+}
+
+.navigation-vertical .dropdown.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.navigation-vertical .dropdown-menu {
+  position: static;
+  width: 100%;
+  background-color: #f9f9f9;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  z-index: 1;
+  display: none;
+  margin: 0;
+  padding: 0;
+  max-height: none;
+  overflow: visible;
+}
+
+.navigation-vertical .dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+  color: #666666;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  border-bottom: 1px solid #eeeeee;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: #f9f9f9;
+}
+
+.navigation-vertical .dropdown-item:hover {
+  background-color: #e8e8e8;
+  color: #333333;
+}
+
+.navigation-vertical .dropdown.active .dropdown-menu {
+  display: block;
+}
+
+.navigation-vertical .dropdown.active .dropdown-toggle {
+  background-color: #e8e8e8;
+  color: #333333;
+}
