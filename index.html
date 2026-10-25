@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>TDISF</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/filters.css">
+  <link rel="stylesheet" href="css/story-tiles.css">
+  <link rel="stylesheet" href="css/modals.css">
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/media.css">
+
+  <!-- JavaScript Files -->
+  <script src="js/stories.js"></script>
+  <script src="js/info-modals.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/init.js"></script>
+
+</head>
+
+<body>
+
+  <a class="skip-link" href="#database-content">Skip to database content</a>
+
+  <div class="main-container">
+
+    <div class="top-grid">
+
+      <div class="top-left-box">
+        <a href="https://uni-tuebingen.de/en/fakultaeten/philosophische-fakultaet/fachbereiche/neuphilologie/englisches-seminar/"
+          target="_blank" rel="noopener noreferrer" class="top-university-logo-link"
+          title="English Seminar, University of Tübingen">
+          <img src="media/uniTuebingen-logo.png" alt="University of Tübingen Logo" class="top-university-logo">
+        </a>
+      </div>
+
+      <div class="top-middle-container">
+        <div class="top-header-box">
+          <h1 class="main-title">TDISF</h1>
+        </div>
+      </div>
+
+      <div class="top-right-box">
+        <span class="institution-status">BLANK</span>
+      </div>
+
+    </div>
+
+    <div class="content-row">
+
+      <div class="sidebar-left">
+
+        <div class="navigation-title">Project</div>
+
+        <nav class="navigation-vertical">
+
+          <div class="navigation-list">
+
+            <div class="navigation-btn">
+              <button type="button" class="bibliography-link" onclick="openBibliographyModal()">Bibliography</button>
+            </div>
+
+            <div class="navigation-btn">
+              <button type="button" class="contributors-link" onclick="openContributorsModal()">Contributors</button>
+            </div>
+
+          </div>
+
+        </nav>
+
+        <div class="about-section" id="about-project">
+          <div class="about-description">
+            The <strong>Tübingen Database of Irish Science Fiction (TDISF)</strong> strives to create a database that
+            comprises a selection of Irish SF texts for all researchers to use. The database was created based on the
+            observation that there is significantly more Irish science fiction than one might initially assume. However,
+            these texts are hardly visible in either the broader context of Irish literature or in the context of the
+            science fiction metatext. Yet, as highlighted in the works of Jack Fennell (see the bibliography), Irish
+            science fiction is inextricably linked to the Irish cultural imaginary, as this genre uniquely negotiates
+            tradition and modernity. Against this backdrop, the database aims to contribute to the visibility of Irish
+            science fiction and thus underscore its significance.
+            <br><br>
+            TDISF is part of the program <a href="https://uni-tuebingen.de/en/266466" target="_blank"><i>Dare to make
+              teaching more innovative!</i></a> and funded by the <a href="https://uni-tuebingen.de/en/182"
+              target="_blank"><i>Division III Academic Affairs</i></a> of the <i>University of Tübingen</i>. The database is being
+            created in the context of two seminars taught by <a href="https://uni-tuebingen.de/en/160993"
+              target="_blank">Raphael Zähringer</a>: "Irish Science Fiction" (Summer Term 2025) and
+            "Anthologising Anglophone Science Fiction" (Winter Term 2025/26). On the one hand, the database draws on
+            <a href="https://www.ul.ie/artsoc/seic/dr-jack-fennell" target="_blank">Jack Fennell's</a> existing
+            bibliography <a href="docs/Fennell-ShortGuideIrishScienceFiction-2019.pdf" target="_blank" download><em>A
+                Short Guide to Irish Science Fiction</em> (2019)</a>, whose entries are to be converted
+            into a database format. On the other hand, in line with approaches to research-based learning, students in
+            both courses are searching for Irish SF texts themselves and creating additional entries for texts in a
+            process that is validated by student peer review. Taking these two sources together, it is expected that by
+            the end of the funding phase in spring 2026, approximately 200 database entries will have been compiled.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-main-container" id="database-content">
+
+        <div class="content-main">
+          <div class="search-container">
+            <input type="text" id="story-search" placeholder="Search stories by title or author ..."
+              class="search-input">
+          </div>
+        </div>
+
+        <div class="story-tiles-container">
+
+          <div class="story-grid" id="story-grid">
+
+            <div class="story-tile" data-story-id="abendaus-heir" data-author="Jo Zebedee"
+              onclick="openStoryModal('abendaus-heir')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Abendau's Heir</div>
+            </div>
+
+            <div class="story-tile" data-story-id="a-smart-well-mannered-uprising-of-the-dead"
+              data-author="Ian McDonald" onclick="openStoryModal('a-smart-well-mannered-uprising-of-the-dead')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">A Smart Well-Mannered Uprising of the Dead</div>
+            </div>
+
+            <div class="story-tile" data-story-id="a-story-without-an-end-for-n-c" data-author="Dorothy Macardle"
+              onclick="openStoryModal('a-story-without-an-end-for-n-c')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">A Story Without an End (For N.C.)</div>
+            </div>
+
+            <div class="story-tile" data-story-id="a-vision" data-author="Art Ó Rian"
+              onclick="openStoryModal('a-vision')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">A Vision</div>
+            </div>
+
+            <div class="story-tile" data-story-id="brayhard" data-author="Edmund Downey"
+              onclick="openStoryModal('brayhard')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Brayhard</div>
+            </div>
+
+            <div class="story-tile" data-story-id="custom-fitting" data-author="James White"
+              onclick="openStoryModal('custom-fitting')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Custom Fitting</div>
+            </div>
+
+            <div class="story-tile" data-story-id="edge-of-heaven" data-author="R. B. Kelly"
+              onclick="openStoryModal('edge-of-heaven')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Edge of Heaven</div>
+            </div>
+
+            <div class="story-tile" data-story-id="hospital-station" data-author="James White"
+              onclick="openStoryModal('hospital-station')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Hospital Station</div>
+            </div>
+
+            <div class="story-tile" data-story-id="how-i-overcame-my-gravity" data-author="Fitz-James O'Brien"
+              onclick="openStoryModal('how-i-overcame-my-gravity')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">How I Overcame My Gravity</div>
+            </div>
+
+            <div class="story-tile" data-story-id="in-dublins-veracity" data-author="Michael Carroll"
+              onclick="openStoryModal('in-dublins-veracity')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">In Dublin's Veracity</div>
+            </div>
+
+            <div class="story-tile" data-story-id="light-of-other-days" data-author="Bob Shaw"
+              onclick="openStoryModal('light-of-other-days')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Light of Other Days</div>
+            </div>
+
+            <div class="story-tile" data-story-id="medic" data-author="James White" onclick="openStoryModal('medic')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Medic</div>
+            </div>
+
+            <div class="story-tile sensitive-content" data-story-id="mercia-the-astronomer-royal"
+              data-content-warnings="sexual-harassment" data-author="Amelia Garland Mears"
+              onclick="handleSensitiveContentClick('mercia-the-astronomer-royal', this)">
+              <div class="paper-preview">
+                <div class="sensitive-content-badge"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Mercia, the Astronomer Royal</div>
+            </div>
+
+            <div class="story-tile" data-story-id="one-million-tomorrows" data-author="Bob Shaw"
+              onclick="openStoryModal('one-million-tomorrows')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">One Million Tomorrows</div>
+            </div>
+
+            <div class="story-tile" data-story-id="pillars" data-author="Jan Carson"
+              onclick="openStoryModal('pillars')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Pillars</div>
+            </div>
+
+            <div class="story-tile" data-story-id="pilot-plant" data-author="Bob Shaw"
+              onclick="openStoryModal('pilot-plant')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Pilot Plant</div>
+            </div>
+
+            <div class="story-tile sensitive-content" data-story-id="skin-tight"
+              data-content-warnings="blood-gore body-horror" data-author="James Lecky"
+              onclick="handleSensitiveContentClick('skin-tight', this)">
+              <div class="paper-preview">
+                <div class="sensitive-content-badge"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Skin-Tight</div>
+            </div>
+
+            <div class="story-tile" data-story-id="small-causes" data-author="Jo Zebedee"
+              onclick="openStoryModal('small-causes')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Small Causes</div>
+            </div>
+
+            <div class="story-tile" data-story-id="spare-and-found-parts" data-author="Sarah Maria Griffin"
+              onclick="openStoryModal('spare-and-found-parts')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Spare and Found Parts</div>
+            </div>
+
+            <div class="story-tile sensitive-content" data-story-id="the-age-of-science"
+              data-content-warnings="non-consensual-experimentation animal-cruelty" data-author="Frances Power Cobbe"
+              onclick="handleSensitiveContentClick('the-age-of-science', this)">
+              <div class="paper-preview">
+                <div class="sensitive-content-badge"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Age of Science</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-cartographers-apprentice" data-author="Tomás Mac Síomóin"
+              onclick="openStoryModal('the-cartographers-apprentice')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Cartographer's Apprentice</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-chronotron" data-author="Tarlach Ó hUid"
+              onclick="openStoryModal('the-chronotron')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Chronotron</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-exile" data-author="Cathal Ó Sándair"
+              onclick="openStoryModal('the-exile')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Exile</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-eyes-of-isaac-newton" data-author="Iggy McGovern"
+              onclick="openStoryModal('the-eyes-of-isaac-newton')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Eyes of Isaac Newton</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-giaconda-caper" data-author="Bob Shaw"
+              onclick="openStoryModal('the-giaconda-caper')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Giaconda Caper</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-gods-and-their-machines" data-author="Oisín McGann"
+              onclick="openStoryModal('the-gods-and-their-machines')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Gods and Their Machines</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-great-beast-of-kafue" data-author="Clotilde Graves"
+              onclick="openStoryModal('the-great-beast-of-kafue')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Great Beast of Kafue</div>
+            </div>
+
+            <div class="story-tile sensitive-content" data-story-id="the-inferior"
+              data-content-warnings="cannibalism blood-gore sexual-assault-violence-implied"
+              data-author="Peadar Ó Guilín" onclick="handleSensitiveContentClick('the-inferior', this)">
+              <div class="paper-preview">
+                <div class="sensitive-content-badge"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Inferior</div>
+            </div>
+
+            <div class="story-tile sensitive-content" data-story-id="the-lexicon-of-babies"
+              data-content-warnings="forced-sterilisation" data-author="Sinéad Gleeson"
+              onclick="handleSensitiveContentClick('the-lexicon-of-babies', this)">
+              <div class="paper-preview">
+                <div class="sensitive-content-badge"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Lexicon of Babies</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-luck-of-pitsey-hall" data-author="L. T. Meade and Robert Eustace"
+              onclick="openStoryModal('the-luck-of-pitsey-hall')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Luck of Pitsey Hall</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-magus-conspiracy" data-author="Michael Synnott"
+              onclick="openStoryModal('the-magus-conspiracy')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Magus Conspiracy</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-new-frankenstein" data-author="William Maginn"
+              onclick="openStoryModal('the-new-frankenstein')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The New Frankenstein</div>
+            </div>
+
+            <div class="story-tile sensitive-content" data-story-id="the-professors-experiment"
+              data-content-warnings="non-consensual-experimentation" data-author="Margaret Wolfe Hungerford"
+              onclick="handleSensitiveContentClick('the-professors-experiment', this)">
+              <div class="paper-preview">
+                <div class="sensitive-content-badge"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Professor's Experiment</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-sorcerer" data-author="Charlotte McManus"
+              onclick="openStoryModal('the-sorcerer')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Sorcerer</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-third-law-rico-dredd-the-titan-years"
+              data-author="Michael Carroll" onclick="openStoryModal('the-third-law-rico-dredd-the-titan-years')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Third Law: Rico Dredd – The Titan Years</div>
+            </div>
+
+            <div class="story-tile" data-story-id="what-time-do-you-call-this" data-author="Bob Shaw"
+              onclick="openStoryModal('what-time-do-you-call-this')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">What Time Do You Call This</div>
+            </div>
+
+            <div class="story-tile" data-story-id="wasted-time" data-author="Paul Carrol"
+              onclick="openStoryModal('wasted-time')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Wasted Time</div>
+            </div>
+
+            <div class="story-tile sensitive-content" data-story-id="blue" data-content-warnings="suicide"
+              data-author="Maria O'Brien" onclick="handleSensitiveContentClick('blue', this)">
+              <div class="paper-preview">
+                <div class="sensitive-content-badge"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Blue</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-men-of-yarnith" data-author="Lord Dunsany"
+              onclick="openStoryModal('the-men-of-yarnith')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Men of Yarnith</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-celestial-circus" data-author="Mark Kielty"
+              onclick="openStoryModal('the-celestial-circus')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Celestial Circus</div>
+            </div>
+
+            <div class="story-tile sensitive-content" data-story-id="bleed-through" data-content-warnings="suicide"
+              data-author="Rien Gray" onclick="handleSensitiveContentClick('bleed-through', this)">
+              <div class="paper-preview">
+                <div class="sensitive-content-badge"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Bleed Through</div>
+            </div>
+
+            <div class="story-tile" data-story-id="artemis" data-author="Yves Donlon"
+              onclick="openStoryModal('artemis')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Artemis</div>
+            </div>
+
+            <div class="story-tile" data-story-id="silicon-remnants" data-author="Kat Dodd"
+              onclick="openStoryModal('silicon-remnants')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Silicon Remnants</div>
+            </div>
+
+            <div class="story-tile" data-story-id="paradigm-shift" data-author="Kat Dodd"
+              onclick="openStoryModal('paradigm-shift')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Paradigm Shift</div>
+            </div>
+
+            <div class="story-tile" data-story-id="mornings-echo" data-author="Kat Dodd"
+              onclick="openStoryModal('mornings-echo')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Morning's Echo</div>
+            </div>
+
+            <div class="story-tile" data-story-id="the-alien" data-author="Greg Delanty"
+              onclick="openStoryModal('the-alien')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Alien</div>
+            </div>
+
+            <div class="story-tile sensitive-content" data-story-id="the-banjaxed-beour"
+              data-content-warnings="self-injury murder" data-author="Paul Carrol"
+              onclick="handleSensitiveContentClick('the-banjaxed-beour', this)">
+              <div class="paper-preview">
+                <div class="sensitive-content-badge"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">The Banjaxed Beour</div>
+            </div>
+
+            <div class="story-tile" data-story-id="hotbooley" data-author="Natasha Calder"
+              onclick="openStoryModal('hotbooley')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">hotBooley</div>
+            </div>
+
+            <div class="story-tile" data-story-id="into-the-darklight" data-author="Tommy Arrigan"
+              onclick="openStoryModal('into-the-darklight')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Into the Darklight</div>
+            </div>
+
+            <div class="story-tile" data-story-id="europa" data-author="Tommy Arrigan"
+              onclick="openStoryModal('europa')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Europa</div>
+            </div>
+
+            <div class="story-tile sensitive-content" data-story-id="inish-carraig" data-content-warnings="genocide"
+              data-author="Jo Zebedee" onclick="handleSensitiveContentClick('inish-carraig', this)">
+              <div class="paper-preview">
+                <div class="sensitive-content-badge"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Inish Carraig</div>
+            </div>
+
+            <div class="story-tile" data-story-id="into-a-blood-red-sky" data-author="Jo Zebedee"
+              onclick="openStoryModal('into-a-blood-red-sky')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Into a Blood-Red Sky</div>
+            </div>
+
+            <div class="story-tile" data-story-id="craig-mccarthy" data-author="Scotty Sarafian"
+              onclick="openStoryModal('craig-mccarthy')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Craig McCarthy</div>
+            </div>
+
+            <div class="story-tile" data-story-id="history-of-a-world-of-immortals-without-a-god"
+              data-author="James William Barlow"
+              onclick="openStoryModal('history-of-a-world-of-immortals-without-a-god')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">History of a World of Immortals without a God</div>
+            </div>
+
+            <div class="story-tile" data-story-id="phosphate-poison" data-author="Quinn Clancy"
+              onclick="openStoryModal('phosphate-poison')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Phosphate Poison</div>
+            </div>
+
+            <div class="story-tile sensitive-content" data-story-id="riding-the-white-bull"
+              data-content-warnings="body-horror substance-abuse" data-author="Caitlín R. Kiernan"
+              onclick="handleSensitiveContentClick('riding-the-white-bull', this)">
+              <div class="paper-preview">
+                <div class="sensitive-content-badge"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Riding the White Bull</div>
+            </div>
+
+            <div class="story-tile" data-story-id="captain-kwailynn-and-the-pub-of-a-thousand-planets"
+              data-author="Helen Carrol" onclick="openStoryModal('captain-kwailynn-and-the-pub-of-a-thousand-planets')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Captain K'wai'lynn and the Pub of a Thousand Planets</div>
+            </div>
+
+            <div class="story-tile" data-story-id="saga" data-author="Conor Kostick" onclick="openStoryModal('saga')">
+              <div class="paper-preview">
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Saga</div>
+            </div>
+
+            <div class="story-tile sensitive-content" data-story-id="velvet-fields" data-content-warnings="genocide"
+              data-author="Anne McCaffrey" onclick="handleSensitiveContentClick('velvet-fields', this)">
+              <div class="paper-preview">
+                <div class="sensitive-content-badge"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+                <div class="paper-lines"></div>
+              </div>
+              <div class="story-title">Velvet Fields</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sidebar-right" id="filters-panel">
+
+        <div class="filters-title">Filters</div>
+
+        <div class="tags-container">
+
+          <div class="filter-dropdown" id="tags-dropdown">
+            <button class="filter-dropdown-toggle" id="tags-dropdown-toggle">
+              <span class="filter-dropdown-label">Keywords</span>
+              <span class="filter-dropdown-arrow">▼</span>
+            </button>
+            <div class="filter-dropdown-menu" id="tags-dropdown-menu">
+              <div class="filter-search-container">
+                <input type="text" id="tag-search" placeholder="Search keywords ..." class="filter-search-input">
+              </div>
+              <div class="filter-dropdown-list" id="tags-list">
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-dropdown" id="authors-dropdown">
+            <button class="filter-dropdown-toggle" id="authors-dropdown-toggle">
+              <span class="filter-dropdown-label">Authors</span>
+              <span class="filter-dropdown-arrow">▼</span>
+            </button>
+            <div class="filter-dropdown-menu" id="authors-dropdown-menu">
+              <div class="filter-search-container">
+                <input type="text" id="author-search" placeholder="Search authors ..." class="filter-search-input">
+              </div>
+              <div class="filter-dropdown-list" id="authors-list">
+              </div>
+            </div>
+          </div>
+
+          <div class="selected-filters-container" id="selected-filters-container" style="display: none;">
+            <div class="selected-filters-header">
+              <span class="selected-filters-title">Active Filters</span>
+              <button class="clear-all-filters-btn" id="clearAllFiltersBtn" title="Clear all filters">Clear All</button>
+            </div>
+            <div class="selected-filters-list" id="selected-filters-list">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer class="footer-box">
+    <div class="footer-content">
+      <p class="footer-project">Tübingen Database of Irish Science Fiction</p>
+      <p class="footer-institution">A research project associated with the <i>English Seminar</i> at the <i>University
+          of
+          Tübingen</i></p>
+      <p class="footer-copyright">© 2026 Eberhard Karls Universität Tübingen</p>
+      <nav class="footer-links" aria-label="Institutional information">
+        <a href="https://uni-tuebingen.de/en/334" target="_blank" rel="noopener noreferrer">Imprint</a>
+        <a href="https://uni-tuebingen.de/en/336" target="_blank" rel="noopener noreferrer">Privacy</a>
+        <a href="https://uni-tuebingen.de/en/184219" target="_blank" rel="noopener noreferrer">Accessibility</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="story-modal" class="story-modal">
+
+    <div class="story-modal-content">
+
+      <div class="story-modal-header">
+        <h2 id="story-title">Story Title</h2>
+        <div class="modal-header-buttons">
+          <button onclick="downloadStoryPDF()" class="download-btn" title="Save as PDF"
+            aria-label="Save as PDF">📄</button>
+          <button onclick="closeStoryModal()" class="close-btn">&times;</button>
+        </div>
+      </div>
+
+      <div class="story-modal-body">
+
+        <div class="story-info">
+
+          <div class="story-meta">
+            <p><strong>Author:</strong> <span id="story-author">Author</span></p>
+            <p><strong>Publisher:</strong> <span id="story-publisher">Publisher</span></p>
+            <p><strong>Place:</strong> <span id="story-publisher-place">Place</span></p>
+            <p><strong>Year:</strong> <span id="story-year">Year</span></p>
+            <p id="story-note-container" style="display: none;">
+              <strong>Note:</strong> <span id="story-note">Note</span>
+            </p>
+          </div>
+
+          <div class="story-abstract">
+            <h3>Abstract</h3>
+            <p id="story-abstract-text">Story abstract will appear here ...</p>
+          </div>
+
+          <div class="story-tags-section">
+            <h3>Keywords</h3>
+            <div class="story-tags-container" id="story-tags-container">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="trigger-warning-modal" class="trigger-warning-modal">
+
+    <div class="trigger-warning-content">
+
+      <div class="trigger-warning-header">
+        <h2>Trigger warning</h2>
+      </div>
+
+      <div class="trigger-warning-body">
+        <div class="trigger-warnings-container" id="trigger-warnings-container">
+        </div>
+      </div>
+
+      <div class="trigger-warning-buttons">
+        <button onclick="closeTriggerWarningModal()" class="trigger-btn trigger-btn-back">Back</button>
+        <button onclick="proceedToStory()" class="trigger-btn trigger-btn-continue">Continue</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="bibliography-modal" class="story-modal bibliography-modal">
+
+    <div class="story-modal-content">
+
+      <div class="story-modal-header">
+        <h2>Bibliography</h2>
+        <div class="modal-header-buttons">
+          <button onclick="closeBibliographyModal()" class="close-btn" aria-label="Close">&times;</button>
+        </div>
+      </div>
+
+      <div class="story-modal-body">
+        <div class="bibliography-content" id="bibliography-content">
+          <ul class="bibliography-list">
+            <li>
+              <strong>Primary</strong>
+              Fennell, Jack. <em>A Short Guide to Irish Science Fiction</em>. Edited by the Dublin 2019 Committee. Dublin: Worldcon Bid, 2019.
+            </li>
+            <li>
+              <strong>Secondary</strong>
+              Fennell, Jack. <em>Irish Science Fiction</em>. Liverpool Science Fiction Texts and Studies 48. Liverpool: Liverpool University Press, 2014.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="contributors-modal" class="story-modal contributors-modal">
+
+    <div class="story-modal-content">
+
+      <div class="story-modal-header">
+        <h2>Contributors</h2>
+        <div class="modal-header-buttons">
+          <button onclick="closeContributorsModal()" class="close-btn" aria-label="Close">&times;</button>
+        </div>
+      </div>
+
+      <div class="story-modal-body">
+        <div class="contributors-content" id="contributors-content">
+          <ul class="contributors-list">
+            <li>
+              <strong>Editors</strong>
+              PD Dr. Ralph Zähringer <em>(PI)</em><br>
+              Cornelius Mülke <em>(SRA)</em>
+            </li>
+            <li><strong>Students</strong></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

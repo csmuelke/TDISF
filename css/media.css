@@ -1,0 +1,159 @@
+/* Media Queries and Accessibility */
+
+@media print {
+  .top-grid,
+  .sidebar-left,
+  .sidebar-right,
+  .navigation-vertical,
+  .tags-container {
+    display: none !important;
+  }
+  
+  .content-main-container {
+    border: none !important;
+    width: 100% !important;
+  }
+  
+  .content-main {
+    background-color: white !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  
+  .story-tile {
+    break-inside: avoid;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .story-tile {
+    border: 2px solid;
+  }
+  
+  .tag {
+    border: 1px solid;
+  }
+  
+  .navigation-btn {
+    border: 1px solid;
+  }
+}
+
+@media (max-width: 1000px) {
+  .top-grid,
+  .content-row {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "left content" "right content";
+  }
+
+  .content-row {
+    grid-template-areas: "nav content" "tags content";
+  }
+
+  .top-right-box {
+    min-height: 60px;
+  }
+
+  .content-row,
+  .sidebar-left,
+  .sidebar-right,
+  .content-main-container {
+    height: 720px;
+  }
+}
+
+@media (max-width: 700px) {
+  .top-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "left" "content" "right";
+    gap: 8px;
+  }
+
+  .top-left-box,
+  .top-right-box,
+  .top-middle-container {
+    min-height: 0;
+  }
+
+  .top-left-box {
+    padding: 14px 10px 4px;
+  }
+
+  .top-right-box {
+    padding: 4px 10px 12px;
+  }
+
+  .top-header-box {
+    min-height: 110px;
+  }
+
+  .content-row {
+    grid-template-columns: 1fr;
+    grid-template-areas: "nav" "tags" "content";
+    margin-top: 5px;
+    height: auto;
+  }
+
+  .sidebar-left,
+  .sidebar-right,
+  .content-main-container {
+    height: auto;
+  }
+
+  .sidebar-left {
+    order: 1;
+  }
+
+  .sidebar-right {
+    order: 2;
+  }
+
+  .content-main-container {
+    order: 3;
+  }
+
+  .content-main-container {
+    min-height: 70vh;
+  }
+
+  .about-description {
+    text-align: left;
+  }
+
+  .story-grid {
+    grid-template-columns: repeat(3, minmax(80px, 1fr));
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .paper-preview {
+    width: 78px;
+    height: 98px;
+  }
+}
+
+@media (max-width: 420px) {
+  .story-grid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+
+  .main-title {
+    font-size: 28px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
